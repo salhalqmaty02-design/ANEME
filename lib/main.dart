@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const AnimeVerseApp());
+  runApp(const AnimeStars());
 }
 
-class AnimeVerseApp extends StatelessWidget {
-  const AnimeVerseApp({super.key});
+class AnimeStars extends StatelessWidget {
+  const AnimeStars({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'AnimeVerse AI',
+      title: 'Anime Stars',
       theme: ThemeData(
         brightness: Brightness.dark,
-        colorSchemeSeed: Colors.deepPurple,
+        primarySwatch: Colors.purple,
       ),
       home: const HomePage(),
     );
@@ -28,12 +28,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AnimeVerse AI'),
+        title: const Text('Anime Stars ⭐'),
+        centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'مرحبا بك في عالم الأنمي والذكاء الاصطناعي',
-          style: TextStyle(fontSize: 20),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text(
+              'مرحباً بك في Anime Stars',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 15),
+            Text(
+              'عالم الأنمي بين يديك 🌌',
+              style: TextStyle(fontSize: 18),
+            ),
+          ],
         ),
       ),
     );
